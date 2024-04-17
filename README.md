@@ -4,11 +4,12 @@ Java application that calculates and prints order details for clients of the com
 
 ### Example usage
 <!-- First Image -->
-<img src="![image](https://github.com/nikoletabeyska/SnackPricing/assets/76749430/5abd1e01-4ed7-460c-8c8d-79ddeef8569a)
+<img src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/5abd1e01-4ed7-460c-8c8d-79ddeef8569a
 " alt="Image 1" style="margin-right: 10px;">
 
 <!-- Second Image -->
-<img src="image2.jpg" alt="Image 2" style="margin-right: 10px;">
+<img src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/694ae7e2-7dd8-4619-abec-5fc2852a401a"
+ alt="Image 2" style="margin-right: 10px;">
 
 
 ## Implementation
