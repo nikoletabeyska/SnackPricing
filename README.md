@@ -1,20 +1,21 @@
 ### Description
 Java application that calculates and prints order details for clients of the company Everyday Snacks!
-- The application uses console input or file input to process orders in the format: "5,1=10000,4=20000".
+The application uses console input or file input to process orders in the format: **"5,1=10000,4=20000"**.
 
 ### Example usage
 <!-- First Image -->
-<img src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/5abd1e01-4ed7-460c-8c8d-79ddeef8569a
-" alt="Image 1" style="margin-right: 10px;">
+ - using console input
+<img width="703" alt="image" src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/2ddaf740-87b2-4d85-a58b-a7b68c093521" style="margin-right: 10px;">
 
 <!-- Second Image -->
+ - using file input
 <img src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/694ae7e2-7dd8-4619-abec-5fc2852a401a"
  alt="Image 2" style="margin-right: 10px;">
 
 
 ## Implementation
 
-  _Most of the discounts and numeric variables are stored using BigDecimal class for acheiving better precision when doing calculations although it is slower and uses more memory than double._
+  _Most of the discounts and numeric variables are stored using **BigDecimal class** for acheiving better precision when doing calculations although it is slower and uses more memory than double._
 
  ### Client class
   - Represents client of the company Everyday Snacks
@@ -27,9 +28,9 @@ Java application that calculates and prints order details for clients of the com
  ### Product class
   -	Represents product of the company Everyday Snacks
   - Stores product details(id, name, unitCost, markupStrategy, promotionStrategy, standardUnitPrice, promotionalUnitPrice)
-  -	Stores markupStrategy as a reference of the Interface Markup – providing abstraction – Product just needs to have its standard unit price calculated without caring what will the markup implementation will be based on its type. Also more markup types can be added implementing Markup interface
+  -	Stores markupStrategy as a reference of the Interface _Markup_ – providing abstraction – Product just needs to have its standard unit price calculated without caring what will the markup implementation will be based on its type. Also more markup types can be added implementing Markup interface
   - Same goes for Promotion interface reference
-  - StandardUnitPrice and promotionalUnitPrice are stored so they don’t have to be precalculated each time (only when being initialized and when there is an update in the other aattributes)
+  - StandardUnitPrice and PromotionalUnitPrice are stored as attribites so that they don’t have to be precalculated each time (only when being initialized and when there is an update in the other aattributes)
 
   ### Markup interface
   - Has abstract method _calculateStandardPriceUnit_
@@ -42,26 +43,26 @@ Java application that calculates and prints order details for clients of the com
    - Has factory method PromotionFactory wjich creates promotions based on input
 
   ### Storage class
-    -	Stores Everyday Snacks’s clients and products in hash maps by their ids as keys 
-    - Storage class is used when we want to calculate _order details_ based on specific client and products – clients and products are retrieved in constant time by their id
-    - Clients and Products can be stored in Json files and we can populate the Storage class when we run the application using _populateProductsFromFile()_ and _populateClientsFromFile()_. This way we can add more clients and products to our application.
-    - Clients and products can be added also manually and removed by their id (_addClient(..)_, _removeClientById(..)_)
+   - Stores Everyday Snacks’s clients and products in hash maps by their ids as keys 
+   - Storage class is used when we want to calculate _order details_ based on specific client and products – clients and products are retrieved in constant time by their id
+   - Clients and Products can be stored in Json files and we can populate the Storage class when we run the application using _populateProductsFromFile()_ and _populateClientsFromFile()_. This way we can add more clients and products to our application.
+   - Clients and products can be added also manually and removed by their id (_addClient(..)_, _removeClientById(..)_)
 
   ### Utility classes
-     - _FileReaderUtility_ - used to handle reading from JSON file. More file types can be added in the future.
-     - _InfoParser_ - used by FileReaderUtility to parse the data into Client and Product objects after modifying the needed attributes from String to the compatible types in Client and Product constructors 
+   - _FileReaderUtility_ - used to handle reading from JSON file. More file types can be added in the future.
+   - _InfoParser_ - used by FileReaderUtility to parse the data into Client and Product objects after modifying the needed attributes from String to the compatible types in Client and Product constructors 
 
   ### Order class
-    - Representing order - stores Client and HashMap of Product and quantity
-    - Calculates and returns the order information using Client and Product classes methods
+   - Representing order - stores Client and HashMap of Product and quantity
+   - Calculates and returns the order information using Client and Product classes methods
 
   ### RequestHandler class
-    - populates storage class manually or from file
-    - Handles user input from the console or from file
-    - Validates and process input - printing the order information using Order class print method
+   - populates storage class manually or from file
+   - Handles user input from the console or from file
+   - Validates and process input - printing the order information using Order class print method
 
 ## Test cases
-Test cases are made using JUnit5 and Mockito.
+- Test cases are made using JUnit5 and Mockito.
 
 
 
