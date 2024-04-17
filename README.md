@@ -48,7 +48,7 @@ The application uses console input or file input to process orders in the format
    - Stores Everyday Snacks’s clients and products in hash maps by their ids as keys 
    - Storage class is used when we want to calculate ***order details*** based on specific client and products – clients and products are retrieved in constant time by their id
    - Clients and Products can be stored in Json files and we can populate the Storage class when we run the application using ***populateProductsFromFile()*** and ***populateClientsFromFile()***. This way we can add more clients and products to our application.
-   - Clients and products can be added also manually and removed by their id (***addClient(..***, ***removeClientById(..)***)
+   - Clients and products can be added also manually and removed by their id ( ***addClient(..) ***, ***removeClientById(..)*** )
 
   ### Utility classes
    - ***FileReaderUtility*** - used to handle reading from JSON file. More file types can be added in the future.
