@@ -9,7 +9,7 @@ The application uses console input or file input to process orders in the format
 
 <!-- Second Image -->
  - using file input
-   <img width="703" alt="image" src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/2131615a-78be-48b7-8ba9-8b934a287e05" style="margin-right: 10px;">
+<img width="703" alt="image" src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/2131615a-78be-48b7-8ba9-8b934a287e05" style="margin-right: 10px;">
 
 
 ## Implementation
