@@ -3,10 +3,13 @@ Java application that calculates and prints order details for clients of the com
 !The application uses console input or file input to process orders in the format: "5,1=10000,4=20000".!
 
 ### Example usage
+<!-- First Image -->
+<img src="![image](https://github.com/nikoletabeyska/SnackPricing/assets/76749430/5abd1e01-4ed7-460c-8c8d-79ddeef8569a)
+" alt="Image 1" style="margin-right: 10px;">
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![]([https://...Dark.png](https://github.com/nikoletabeyska/SnackPricing/assets/76749430/8b880616-83a8-41cc-ada7-56c4fe1ed45)  |  ![]([https://...Ocean.png](https://github.com/nikoletabeyska/SnackPricing/assets/76749430/1317a8e1-7a11-4728-88a0-13baa925397c)))
+<!-- Second Image -->
+<img src="image2.jpg" alt="Image 2" style="margin-right: 10px;">
+
 
 ## Implementation
 
