@@ -1,0 +1,30 @@
+[
+  {
+    "Product ID" : "1",
+    "Product name" : "Danish Muffin",
+    "Unit Cost (EUR)" : "0.52",
+    "Markup" : "80%",
+    "Product Promotion" : "none"
+  },
+  {
+    "Product ID" : "2",
+    "Product name" : "Granny’s Cup Cake",
+    "Unit Cost (EUR)" : "0.38",
+    "Markup" : "120%",
+    "Product Promotion" : "30% off"
+  },
+  {
+    "Product ID" : "3",
+    "Product name" : "Frenchy’s Croissant",
+    "Unit Cost (EUR)" : "0.41",
+    "Markup" : "0.90 EUR/unit",
+    "Product Promotion" : "none"
+  },
+  {
+    "Product ID" : "4",
+    "Product name" : "Crispy chips",
+    "Unit Cost (EUR)" : "0.60",
+    "Markup" : "1.00 EUR/unit",
+    "Product Promotion" : "Buy 2, get 3rd free"
+  }
+]

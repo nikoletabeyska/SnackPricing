@@ -1,0 +1,47 @@
+[
+  {
+    "Client ID" : "1",
+    "Client name" : "ABC Distribution",
+    "Basic Client Discount" : "5%",
+    "Additional Volume Discount" : {
+      "Above EUR 10000" : "0%",
+      "Above EUR 30000" : "2%"
+    }
+  },
+  {
+    "Client ID" : "2",
+    "Client name" : "DEF Foods",
+    "Basic Client Discount" : "4%",
+    "Additional Volume Discount" : {
+      "Above EUR 10000" : "1%",
+      "Above EUR 30000" : "2%"
+    }
+  },
+  {
+    "Client ID" : "3",
+    "Client name" : "GHI Trade",
+    "Basic Client Discount" : "3%",
+    "Additional Volume Discount" : {
+      "Above EUR 10000" : "1%",
+      "Above EUR 30000" : "3%"
+    }
+  },
+  {
+    "Client ID" : "4",
+    "Client name" : "JKL Kiosks",
+    "Basic Client Discount" : "2%",
+    "Additional Volume Discount" : {
+      "Above EUR 10000" : "3%",
+      "Above EUR 30000" : "5%"
+    }
+  },
+  {
+    "Client ID" : "5",
+    "Client name" : "MNO Vending",
+    "Basic Client Discount" : "0%",
+    "Additional Volume Discount" : {
+      "Above EUR 10000" : "5%",
+      "Above EUR 30000" : "7%"
+    }
+  }
+]
