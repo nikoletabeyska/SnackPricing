@@ -1,4 +1,4 @@
-###Description
+### Description
 
 Java application that calculates and prints order details for clients of the company Everyday Snacks!
 
@@ -15,7 +15,7 @@ The application uses console input or file input to process orders in the format
 
   _Most of the discounts and numeric variables are stored using BigDecimal class for acheiving better precision when doing calculations although it is slower and uses more memory than double._
 
- ###Client class
+ ### Client class
   - Represents client of the company Everyday Snacks
   - Stores client details (id, name, basicClientDiscount, additionalVolumeDiscounts)
   -	It has 2 important methods which calculate the discounts with precision up to 2 decimal places:
@@ -23,38 +23,38 @@ The application uses console input or file input to process orders in the format
      -  _calculateAdditionalVolumeDiscount_
 -	Storing additionalVolumeDiscount in TreeMap keeps cost bounds as sorted keys which gives the oportunity to check for having this type of discount using binary search (lowerKey) method
 
- ###Product class
+ ### Product class
   -	Represents product of the company Everyday Snacks
   - Stores product details(id, name, unitCost, markupStrategy, promotionStrategy, standardUnitPrice, promotionalUnitPrice)
   -	Stores markupStrategy as a reference of the Interface Markup – providing abstraction – Product just needs to have its standard unit price calculated without caring what will the markup implementation will be based on its type. Also more markup types can be added implementing Markup interface
   - Same goes for Promotion interface reference
   - StandardUnitPrice and promotionalUnitPrice are stored so they don’t have to be precalculated each time (only when being initialized and when there is an update in the other aattributes)
 
-  ###Markup interface
+  ### Markup interface
   - Has abstract method _calculateStandardPriceUnit_
   - Implemented by _EURMarkup_ and _PercentageMarkup_
   - Also there is factory method for creating different types of markup based on input - _MarkupFactory_
 
-  ###Promotion interface
+  ### Promotion interface
    - Has abstract method _calculatePromotionalUnitPrice_
    - Implemented by _DiscountPromotion_ and _BuyAmountGetAmountForFreePromotion_ and can be extended with more promotions in the future
    - Has factory method PromotionFactory wjich creates promotions based on input
 
-  ###Storage class
+  ### Storage class
     -	Stores Everyday Snacks’s clients and products in hash maps by their ids as keys 
     - Storage class is used when we want to calculate _order details_ based on specific client and products – clients and products are retrieved in constant time by their id
     - Clients and Products can be stored in Json files and we can populate the Storage class when we run the application using _populateProductsFromFile()_ and _populateClientsFromFile()_. This way we can add more clients and products to our application.
     - Clients and products can be added also manually and removed by their id (_addClient(..)_, _removeClientById(..)_)
 
-  ###Utility classes
+  ### Utility classes
      - _FileReaderUtility_ - used to handle reading from JSON file. More file types can be added in the future.
      - _InfoParser_ - used by FileReaderUtility to parse the data into Client and Product objects after modifying the needed attributes from String to the compatible types in Client and Product constructors 
 
-  ###Order class
+  ### Order class
     - Representing order - stores Client and HashMap of Product and quantity
     - Calculates and returns the order information using Client and Product classes methods
 
-  ###RequestHandler class
+  ### RequestHandler class
     - populates storage class manually or from file
     - Handles user input from the console or from file
     - Validates and process input - printing the order information using Order class print method
