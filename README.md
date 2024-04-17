@@ -3,12 +3,15 @@ Java application that calculates and prints order details for clients of the com
 The application uses console input or file input to process orders in the format: **"5,1=10000,4=20000"**.
 
 ### Example usage
+
 <!-- First Image -->
- - using console input
+ - _using console input_
+   
 <img width="703" alt="image" src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/2ddaf740-87b2-4d85-a58b-a7b68c093521" style="margin-right: 10px;">
 
 <!-- Second Image -->
- - using file input
+ - _using file input_
+ - 
 <img width="703" alt="image" src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/2131615a-78be-48b7-8ba9-8b934a287e05" style="margin-right: 10px;">
 
 
