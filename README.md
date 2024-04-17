@@ -1,15 +1,12 @@
 ### Description
-
 Java application that calculates and prints order details for clients of the company Everyday Snacks!
-
-The application uses console input or file input to process orders in the format: "5,1=10000,4=20000".
+!The application uses console input or file input to process orders in the format: "5,1=10000,4=20000".!
 
 ### Example usage
-- using console input
-![image](https://github.com/nikoletabeyska/SnackPricing/assets/76749430/8b880616-83a8-41cc-ada7-56c4fe1ed458)
 
-- using file
-  ![image](https://github.com/nikoletabeyska/SnackPricing/assets/76749430/1317a8e1-7a11-4728-88a0-13baa925397c)
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![]([https://...Dark.png](https://github.com/nikoletabeyska/SnackPricing/assets/76749430/8b880616-83a8-41cc-ada7-56c4fe1ed45)  |  ![]([https://...Ocean.png](https://github.com/nikoletabeyska/SnackPricing/assets/76749430/1317a8e1-7a11-4728-88a0-13baa925397c)))
 
 ## Implementation
 
