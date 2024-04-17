@@ -5,13 +5,13 @@ The application uses console input or file input to process orders in the format
 ### Example usage
 
 <!-- First Image -->
- - _using console input_
+ - **using console input**
    
 <img width="703" alt="image" src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/2ddaf740-87b2-4d85-a58b-a7b68c093521" style="margin-right: 10px;">
 
 <!-- Second Image -->
- - _using file input_
- - 
+ - **using file input**
+   
 <img width="703" alt="image" src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/2131615a-78be-48b7-8ba9-8b934a287e05" style="margin-right: 10px;">
 
 
