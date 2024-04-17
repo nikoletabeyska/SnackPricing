@@ -1,6 +1,6 @@
 ### Description
 Java application that calculates and prints order details for clients of the company Everyday Snacks!
-!The application uses console input or file input to process orders in the format: "5,1=10000,4=20000".!
+- The application uses console input or file input to process orders in the format: "5,1=10000,4=20000".
 
 ### Example usage
 <!-- First Image -->
