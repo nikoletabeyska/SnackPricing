@@ -10,6 +10,7 @@ The application uses console input or file input to process orders in the format
    
 <img width="704" alt="image" src="https://github.com/nikoletabeyska/SnackPricing/assets/76749430/c738dfa5-34b7-4a95-bc7e-162856b5c344" style="margin-right: 10px;">
 
+
 <!-- Second Image -->
  - **using file input**
    
