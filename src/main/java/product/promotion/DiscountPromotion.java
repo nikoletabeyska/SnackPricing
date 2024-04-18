@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class DiscountPromotion implements Promotion {
+
     public BigDecimal discount;
     public static final BigDecimal NONE = BigDecimal.valueOf(-1);
     public DiscountPromotion(BigDecimal discount) {

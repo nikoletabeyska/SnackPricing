@@ -6,6 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MarkupFactory {
+
     public static Pattern percentRegex = Pattern.compile("\\d+%");
     public static Pattern currencyRegex = Pattern.compile("\\d+(\\.\\d+)? EUR/unit");
 

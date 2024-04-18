@@ -12,11 +12,11 @@ import java.util.Locale;
 import java.util.Map;
 
 public class Order {
+
     private final Client client;
     private final HashMap<Product, Integer> orderedProducts;
     public static final int DECIMAL_PLACES = 2;
     public static final BigDecimal NONE = BigDecimal.valueOf(-1);
-    //DecimalFormat df = new DecimalFormat("#,##0.00");
     DecimalFormat df = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(Locale.US));
     DecimalFormat d = new DecimalFormat("#,##0", DecimalFormatSymbols.getInstance(Locale.US));
 

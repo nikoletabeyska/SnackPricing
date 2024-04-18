@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class PercentageMarkup implements Markup {
+
     private BigDecimal fractionMarkup;
     public PercentageMarkup(BigDecimal percentageMarkup) {
         //33.33% -> 0.3333

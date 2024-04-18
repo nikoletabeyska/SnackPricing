@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class Storage {
+
     private static HashMap<Integer, Client> clients;
     private static HashMap<Integer, Product> products;
 
