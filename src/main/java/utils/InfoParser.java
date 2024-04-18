@@ -7,10 +7,11 @@ import product.markup.MarkupFactory;
 import org.json.simple.JSONObject;
 import product.promotion.Promotion;
 import product.promotion.PromotionFactory;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.TreeMap;
+
+
 public class InfoParser {
     private static int DECIMAL_PLACES = 2;
     public static BigDecimal parsePercentage(String percentage) {

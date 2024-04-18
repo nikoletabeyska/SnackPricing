@@ -18,6 +18,11 @@ public class PercentageMarkup implements Markup {
     }
 
     @Override
+    public BigDecimal getMarkup() {
+        return fractionMarkup;
+    }
+
+    @Override
     public String toString() {
         return "PercentageMarkup{" +
             "fractionMarkup=" + fractionMarkup +

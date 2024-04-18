@@ -12,6 +12,7 @@ public class BuyAmountGetAmountForFreePromotion implements Promotion {
         this.amountToGetForFree = amountToGetForFree;
     }
 
+
     @Override
     public BigDecimal calculatePromotionalUnitPrice(BigDecimal standardUnitPrice) {
         BigDecimal totalAmountGot = BigDecimal.valueOf(amountToBuy + amountToGetForFree);
@@ -22,5 +23,12 @@ public class BuyAmountGetAmountForFreePromotion implements Promotion {
         BigDecimal priceAfterFractionDiscount = standardUnitPrice.subtract(standardUnitPrice.multiply(fractionDiscount).setScale(DECIMALS, RoundingMode.HALF_UP)).setScale(DECIMALS, RoundingMode.HALF_UP);
 
         return priceAfterFractionDiscount;
+    }
+
+    @Override
+    public BigDecimal getDiscount() {
+        BigDecimal totalAmountGot = BigDecimal.valueOf(amountToBuy + amountToGetForFree);
+        BigDecimal amountToGetForFree = BigDecimal.valueOf(this.amountToGetForFree);
+        return amountToGetForFree.divide(totalAmountGot, DECIMALS_USING_FRACTION, RoundingMode.HALF_UP);
     }
 }

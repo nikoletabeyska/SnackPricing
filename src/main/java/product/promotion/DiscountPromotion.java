@@ -19,4 +19,9 @@ public class DiscountPromotion implements Promotion {
 
     }
 
+    @Override
+    public BigDecimal getDiscount() {
+        return discount;
+    }
+
 }

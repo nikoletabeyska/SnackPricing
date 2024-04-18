@@ -15,6 +15,12 @@ public class EURMarkup implements Markup {
     }
 
     @Override
+    public BigDecimal getMarkup() {
+        return eurMarkup;
+    }
+
+
+    @Override
     public String toString() {
         return "EURMarkup{" +
             "eurMarkup=" + eurMarkup +

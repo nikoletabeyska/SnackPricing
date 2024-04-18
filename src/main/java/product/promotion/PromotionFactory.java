@@ -4,23 +4,24 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class PromotionFactory {
-
-    public static Promotion createPromotionFactory(String clientInput) {
+    public static final int DECIMALS_USING_FRACTION = 4;
+    public static Promotion createPromotionFactory(String userInput) {
         String promotionNumber = null;
-        if (clientInput.contains("off")) {
-            promotionNumber = clientInput.replaceAll("[^\\d]", "");
-            clientInput = "off";
+        if (userInput.contains("off")) {
+            promotionNumber = userInput.split(" ")[0].replace("%", "");
+            userInput = "off";
         }
-        switch (clientInput) {
+        switch (userInput) {
             case "none":
                 return new DiscountPromotion(BigDecimal.valueOf(0));
             case "Buy 2, get 3rd free":
                 return new BuyAmountGetAmountForFreePromotion(2, 1);
             case "off":
-                return new DiscountPromotion(new BigDecimal(promotionNumber).divide(BigDecimal.valueOf(100))
-                    .setScale(2, RoundingMode.HALF_UP));
+                BigDecimal number = new BigDecimal(promotionNumber).setScale(DECIMALS_USING_FRACTION, RoundingMode.HALF_UP);
+                return new DiscountPromotion(number.divide(BigDecimal.valueOf(100)));
+
             default:
-                throw new IllegalArgumentException("Invalid product type: " + clientInput);
+                throw new IllegalArgumentException("Invalid product type: " + userInput);
         }
     }
 }
