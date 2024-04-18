@@ -1,8 +1,6 @@
 package product.markup;
 
 import org.junit.jupiter.api.Test;
-import product.promotion.Promotion;
-import product.promotion.PromotionFactory;
 
 import java.math.BigDecimal;
 

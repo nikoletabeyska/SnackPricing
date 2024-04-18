@@ -3,9 +3,7 @@ import exceptions.ClientDoesNotExistException;
 import exceptions.ProductDoesNotExistException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import product.Product;
-import product.markup.Markup;
 import product.markup.PercentageMarkup;
 import product.promotion.DiscountPromotion;
 
@@ -14,7 +12,7 @@ import java.util.TreeMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.ArgumentMatchers.any;
+
 
 public class StorageTest {
     private static Storage storage;
