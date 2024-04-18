@@ -23,7 +23,7 @@ The application uses console input or file input to process orders in the format
 
  ### Client class
   - Represents client of the company Everyday Snacks
-  - Stores client details (id, name, basicClientDiscount, additionalVolumeDiscounts)
+  - Stores client details `id, name, basicClientDiscount, additionalVolumeDiscounts`
   -	It has 2 important methods which calculate the discounts with precision up to 2 decimal places:
  	   -  `calculateBasicClientDiscount`
      -  `calculateAdditionalVolumeDiscount`
@@ -31,10 +31,10 @@ The application uses console input or file input to process orders in the format
 
  ### Product class
   -	Represents product of the company Everyday Snacks
-  - Stores product details(id, name, unitCost, markupStrategy, promotionStrategy, standardUnitPrice, promotionalUnitPrice)
-  -	Stores markupStrategy as a reference of the Interface ***Markup*** – providing abstraction – Product just needs to have its standard unit price calculated without caring what will the markup implementation will be based on its type. Also more markup types can be added implementing Markup interface
-  - Same goes for Promotion interface reference
-  - StandardUnitPrice and PromotionalUnitPrice are stored as attribites so that they don’t have to be precalculated each time (only when being initialized and when there is an update in the other aattributes)
+  - Stores product details `id, name, unitCost, markupStrategy, promotionStrategy, standardUnitPrice, promotionalUnitPrice`
+  -	Stores `markupStrategy` as a reference of the Interface ***Markup*** – providing abstraction – Product just needs to have its standard unit price calculated without caring what will the markup implementation will be based on its type. Also more markup types can be added implementing Markup interface
+  - Same goes for ***Promotion*** interface reference
+  - `StandardUnitPrice` and `PromotionalUnitPrice` are stored as attribites so that they don’t have to be precalculated each time (only when being initialized and when there is an update in the other aattributes)
 
   ### Markup interface
   - Has abstract method `calculateStandardPriceUnit`
@@ -66,9 +66,9 @@ The application uses console input or file input to process orders in the format
    - File orders.txt is stored in resources/
    - Validates and process input - printing the order information using Order class print method
      
-   ```
+   <div style="border: 1px solid black; padding: 10px;">
       There are possibilities for extending promotion and markup types and also to add more clients and products by using file or input. There is a possibility to pass file with orders to be processed and printed.
-   ```
+   </div>
 
 ## Test cases
 - Unit tests are made using JUnit5 and Mockito.
