@@ -18,7 +18,7 @@ The application uses console input or file input to process orders in the format
 ## Implementation
 
   _Most of the discounts and numeric variables are stored using **BigDecimal class** for acheiving better precision when doing calculations although it is slower and uses more memory than double._
-  _ The files ***clients.json**, ***products.json*** and ***orders.txt*** are stored in ***main/src/resources/***. The first two are used to populate the Storage with clients and products! _
+  _The files ***clients.json**, ***products.json*** and ***orders.txt*** are stored in ***main/src/resources/***. The first two are used to populate the Storage with clients and products!_
 
  ### Client class
   - Represents client of the company Everyday Snacks
