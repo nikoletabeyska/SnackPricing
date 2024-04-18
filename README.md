@@ -18,6 +18,7 @@ The application uses console input or file input to process orders in the format
 ## Implementation
 
   _Most of the discounts and numeric variables are stored using **BigDecimal class** for acheiving better precision when doing calculations although it is slower and uses more memory than double._
+  _ The files ***clients.json**, ***products.json*** and ***orders.txt*** are stored in ***main/src/resources/***. The first two are used to populate the Storage with clients and products! _
 
  ### Client class
   - Represents client of the company Everyday Snacks
@@ -48,6 +49,7 @@ The application uses console input or file input to process orders in the format
    - Stores Everyday Snacks’s clients and products in hash maps by their ids as keys 
    - Storage class is used when we want to calculate ***order details*** based on specific client and products – clients and products are retrieved in constant time by their id
    - Clients and Products can be stored in Json files and we can populate the Storage class when we run the application using ***populateProductsFromFile()*** and ***populateClientsFromFile()***. This way we can add more clients and products to our application.
+   - **In resources/ are stored clients.json and products.json which are populating the storage!** 
    - Clients and products can be added also manually and removed by their id ( ***addClient(..)*** , ***removeClientById(..)*** )
 
   ### Utility classes
@@ -61,6 +63,7 @@ The application uses console input or file input to process orders in the format
   ### RequestHandler class
    - populates storage class manually or from file
    - Handles user input from the console or from file
+   - File orders.txt is stored in resources/
    - Validates and process input - printing the order information using Order class print method
 
 ## Test cases
