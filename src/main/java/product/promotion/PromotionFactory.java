@@ -6,6 +6,7 @@ import java.math.RoundingMode;
 public class PromotionFactory {
 
     public static final int DECIMALS_USING_FRACTION = 4;
+
     public static Promotion createPromotionFactory(String userInput) {
         String promotionNumber = null;
         if (userInput.contains("off")) {

@@ -20,7 +20,6 @@ public class Order {
     DecimalFormat df = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(Locale.US));
     DecimalFormat d = new DecimalFormat("#,##0", DecimalFormatSymbols.getInstance(Locale.US));
 
-
     public Order(Client client, HashMap<Product, Integer> orderedProducts) {
         this.client = client;
         this.orderedProducts = orderedProducts;

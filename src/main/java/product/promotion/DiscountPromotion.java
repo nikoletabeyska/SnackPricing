@@ -7,6 +7,7 @@ public class DiscountPromotion implements Promotion {
 
     public BigDecimal discount;
     public static final BigDecimal NONE = BigDecimal.valueOf(-1);
+
     public DiscountPromotion(BigDecimal discount) {
         this.discount = discount.setScale(DECIMALS_USING_FRACTION, RoundingMode.HALF_UP);
     }

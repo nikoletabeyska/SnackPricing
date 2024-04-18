@@ -43,7 +43,6 @@ public class RequestHandler {
                 System.out.println(e.getMessage());
             }
         }
-
     }
 
     public static void loadStorageUsingFile() {
@@ -106,11 +105,7 @@ public class RequestHandler {
         if (args.length < 2) {
             throw new IllegalArgumentException("Not enough arguments!\n");
         }
-        try {
-            Integer.parseInt(args[0]);
-        } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("ClientID should be a number!\n");
-        }
+        checkIfStringIsNumber(args[0]);
         String orderInputPattern = "^\\d+=\\d+$";
         Pattern p = Pattern.compile(orderInputPattern);
         for (int i = 1; i < args.length; i++) {
@@ -119,11 +114,17 @@ public class RequestHandler {
                 throw new IllegalArgumentException("Order information should be in the format 'number=number'!\n");
             }
         }
-
     }
 
-    public static void printOrderInformation(String[] args)
-        throws ClientDoesNotExistException, ProductDoesNotExistException {
+    public static void checkIfStringIsNumber(String toCheck) {
+        try {
+            Integer.parseInt(toCheck);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("ClientID should be a number!\n");
+        }
+    }
+
+    public static void printOrderInformation(String[] args) {
         int clientId = Integer.parseInt(args[0]);
         Client client = storage.getClientById(clientId);
         HashMap<Product, Integer> orderedProducts = new LinkedHashMap<>();
@@ -140,5 +141,4 @@ public class RequestHandler {
         Order order = new Order(client, orderedProducts);
         System.out.println(order.printOrderInfo());
     }
-
 }
