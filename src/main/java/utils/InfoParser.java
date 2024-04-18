@@ -15,6 +15,7 @@ import java.util.TreeMap;
 public class InfoParser {
 
     private static int DECIMAL_PLACES = 2;
+
     public static BigDecimal parsePercentage(String percentage) {
         if (percentage == null || percentage.isEmpty()) {
             throw new IllegalArgumentException("Percentage string must not be null or empty.");
@@ -39,6 +40,7 @@ public class InfoParser {
         }
         return additionalVolumeDiscountAttribute;
     }
+
     public static Client parseClient(JSONObject clientJson) {
         int id = Integer.parseInt((String) clientJson.get("Client ID"));
         String name = (String) clientJson.get("Client name");

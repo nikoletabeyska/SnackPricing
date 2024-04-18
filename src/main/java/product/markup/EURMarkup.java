@@ -6,6 +6,7 @@ import java.math.RoundingMode;
 public class EURMarkup implements Markup {
 
     private BigDecimal eurMarkup;
+
     public EURMarkup(BigDecimal eurMarkup) {
         this.eurMarkup = eurMarkup;
     }

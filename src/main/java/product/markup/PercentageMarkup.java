@@ -6,6 +6,7 @@ import java.math.RoundingMode;
 public class PercentageMarkup implements Markup {
 
     private BigDecimal fractionMarkup;
+
     public PercentageMarkup(BigDecimal percentageMarkup) {
         //33.33% -> 0.3333
         this.fractionMarkup = percentageMarkup.divide(HUNDRED, DECIMAL_PLACES_USING_FRACTION, RoundingMode.HALF_UP);

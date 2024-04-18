@@ -17,8 +17,8 @@ public class Order {
     private final HashMap<Product, Integer> orderedProducts;
     public static final int DECIMAL_PLACES = 2;
     public static final BigDecimal NONE = BigDecimal.valueOf(-1);
-    DecimalFormat df = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(Locale.US));
-    DecimalFormat d = new DecimalFormat("#,##0", DecimalFormatSymbols.getInstance(Locale.US));
+    public static final DecimalFormat df = new DecimalFormat("#,##0.00", DecimalFormatSymbols.getInstance(Locale.US));
+    public static final DecimalFormat d = new DecimalFormat("#,##0", DecimalFormatSymbols.getInstance(Locale.US));
 
     public Order(Client client, HashMap<Product, Integer> orderedProducts) {
         this.client = client;
