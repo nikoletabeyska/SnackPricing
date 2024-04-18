@@ -16,8 +16,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RequestHandler {
+
     private static Storage storage;
+
     public static void main(String[] args)  {
+
         loadStorageUsingFile();
 
         Scanner scanner = new Scanner(System.in);

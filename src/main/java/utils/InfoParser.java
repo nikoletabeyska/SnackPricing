@@ -13,6 +13,7 @@ import java.util.TreeMap;
 
 
 public class InfoParser {
+
     private static int DECIMAL_PLACES = 2;
     public static BigDecimal parsePercentage(String percentage) {
         if (percentage == null || percentage.isEmpty()) {
