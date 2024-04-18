@@ -34,7 +34,7 @@ public class Storage {
 
     public Product getProductById(int productId)  {
         if (!products.containsKey(productId)) {
-            throw new ProductDoesNotExistException("Client with such id does not exist!\n");
+            throw new ProductDoesNotExistException("Product with such id does not exist!\n");
         }
         return products.get(productId);
     }

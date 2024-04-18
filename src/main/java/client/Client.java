@@ -7,6 +7,7 @@ import java.math.RoundingMode;
 import java.util.TreeMap;
 
 public class Client {
+
     private int id;
     private String name;
     private BigDecimal basicClientDiscount;

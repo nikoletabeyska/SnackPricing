@@ -26,6 +26,7 @@ public class RequestHandler {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choose an option:\n" +
             "1 - Read orders from the console\n" + "2 - Read orders from a file\n");
+
         int choice = scanner.nextInt();
         if (choice == 1) {
             try {
@@ -33,7 +34,6 @@ public class RequestHandler {
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
-
         } else if (choice == 2) {
             System.out.println("Please provide filename: ");
             String filename = scanner.next();
@@ -106,6 +106,10 @@ public class RequestHandler {
             throw new IllegalArgumentException("Not enough arguments!\n");
         }
         checkIfStringIsNumber(args[0]);
+        validateProductOrderFormat(args);
+    }
+
+    public static void validateProductOrderFormat(String[] args) {
         String orderInputPattern = "^\\d+=\\d+$";
         Pattern p = Pattern.compile(orderInputPattern);
         for (int i = 1; i < args.length; i++) {
@@ -125,10 +129,19 @@ public class RequestHandler {
     }
 
     public static void printOrderInformation(String[] args) {
-        int clientId = Integer.parseInt(args[0]);
-        Client client = storage.getClientById(clientId);
-        HashMap<Product, Integer> orderedProducts = new LinkedHashMap<>();
+        Client client = getClient(args[0]);
+        HashMap<Product, Integer> orderedProducts = getOrderedProducts(args);
+        Order order = new Order(client, orderedProducts);
+        System.out.println(order.printOrderInfo());
+    }
 
+    public static Client getClient(String clientIdString) {
+        int clientId = Integer.parseInt(clientIdString);
+        return storage.getClientById(clientId);
+    }
+
+    public static HashMap<Product, Integer> getOrderedProducts(String[] args) {
+        HashMap<Product, Integer> orderedProducts = new LinkedHashMap<>();
         for (int i = 1; i < args.length; i++) {
             String[] productOrderInfo = args[i].split("=");
             int productId = Integer.parseInt(productOrderInfo[0]);
@@ -137,8 +150,6 @@ public class RequestHandler {
 
             orderedProducts.put(product, quantity);
         }
-
-        Order order = new Order(client, orderedProducts);
-        System.out.println(order.printOrderInfo());
+        return orderedProducts;
     }
 }

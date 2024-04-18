@@ -33,20 +33,9 @@ class InfoParserTest {
 
         TreeMap<BigDecimal, BigDecimal> parsedVolumeDiscount = InfoParser.parseVolumeDiscount(volumeDiscount);
 
-        // Check if the parsed volume discount matches the expected values
         assertEquals(new BigDecimal("1000.00"), parsedVolumeDiscount.firstKey());
         assertEquals(new BigDecimal("0.10"), parsedVolumeDiscount.firstEntry().getValue());
         assertEquals(new BigDecimal("2000.00"), parsedVolumeDiscount.higherKey(new BigDecimal("1000")));
         assertEquals(new BigDecimal("0.15"), parsedVolumeDiscount.higherEntry(new BigDecimal("1000")).getValue());
-
-    }
-
-
-    @Test
-    void parseClient() {
-    }
-
-    @Test
-    void parseProduct() {
     }
 }

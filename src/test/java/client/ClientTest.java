@@ -10,7 +10,7 @@ import java.util.TreeMap;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ClientTest {
-    //can add all of them
+
     private static Client client1, client2;
     public static final BigDecimal NONE = BigDecimal.valueOf(-1);
 
@@ -81,8 +81,6 @@ public class ClientTest {
         assertEquals(Pair.of(percentage1, discount1), result1);
         assertEquals(Pair.of(percentage2, discount2), result2);
         assertEquals(Pair.of(percentage3, discount3), result3);
-
     }
-
 
 }

@@ -32,17 +32,6 @@ class OrderTest {
     }
 
     @Test
-    void testPrintOrderInfoClientDetails() {
-        when(mockProduct1.getStandardUnitPrice()).thenReturn(BigDecimal.valueOf(0.94));
-        when(mockProduct1.getStandardUnitPrice()).thenReturn(BigDecimal.valueOf(1.60));
-        when(mockProduct1.getPromotionalUnitPrice()).thenReturn(BigDecimal.valueOf(-1));
-        when(mockProduct1.getPromotionalUnitPrice()).thenReturn(BigDecimal.valueOf(1.06672));
-
-
-
-    }
-
-    @Test
     void testGetClientInfo() {
         when(mockClient.getName()).thenReturn("MNO Vending");
         String expectedOutput = "\nClient:      MNO Vending\n\n";
