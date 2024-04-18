@@ -3,7 +3,14 @@ import exceptions.ClientDoesNotExistException;
 import exceptions.ProductDoesNotExistException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 import product.Product;
+import product.markup.Markup;
+import product.markup.PercentageMarkup;
+import product.promotion.DiscountPromotion;
+
+import java.math.BigDecimal;
+import java.util.TreeMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -19,7 +26,9 @@ public class StorageTest {
 
     @Test
     void getClientById_ClientExists() {
-        Client client = new Client(1, "Test", any(), any());
+        TreeMap<BigDecimal, BigDecimal> additionalAmountDiscount = new TreeMap<>();
+
+        Client client = new Client(1, "Test", BigDecimal.valueOf(0),additionalAmountDiscount);
         storage.addNewClient(client);
         assertEquals(client, storage.getClientById(1));
     }
@@ -31,7 +40,8 @@ public class StorageTest {
 
     @Test
     void getProductById_ProductExists() {
-        Product product = new Product(1, "Test", any(),any(),any());
+        Product product = new Product(1,"Test", BigDecimal.ONE,
+            new PercentageMarkup(BigDecimal.ONE), new DiscountPromotion(BigDecimal.ONE));
         storage.addNewProduct(product);
 
         assertEquals(product, storage.getProductById(1));
@@ -44,7 +54,8 @@ public class StorageTest {
 
     @Test
     void removeProductById_Success() {
-        Product product = new Product(6, "Test", any(),any(),any());
+        Product product = new Product(6,"Test", BigDecimal.ONE,
+            new PercentageMarkup(BigDecimal.ONE), new DiscountPromotion(BigDecimal.ONE));
         storage.addNewProduct(product);
         storage.removeProductById(6);
 
